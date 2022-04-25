@@ -22,15 +22,15 @@
 
     @selecao_obrigatoria
     Esquema do Cenário: Validar impedimento de avanço na compra
-      E selecionei <categoria 1> e <categoria 2>
-      Quando clicar no botão "comprar"
+      Quando deixei de selecionar um dos campos obrigatórios <tamanho> e <cor> e <quantidade>
+      E clicar no botão "comprar"
       Então deve ser exibido a <mensagem> 
         
     Exemplos:
-      | categoria 1 | categoria 2 | mensagem               |
-      | "XS"        | "Orange"    |"Selecionar quantidade" |
-      | "Orange"    |    "2"      |"Selecionar tamanho"    |
-      | "XS"        |    "2"      |"Selecionar cor"        |
+      | tamanho  | cor      | quantidade | mensagem                |
+      | "XS"     | "Orange" |    " "     | "Selecionar quantidade" |
+      | " "      | "Orange" |    "1"     | "Selecionar tamanho"    |
+      | "XS"     | " "      |    "1"     | "Selecionar cor"        |
 
 
     @quantidade_permitida
